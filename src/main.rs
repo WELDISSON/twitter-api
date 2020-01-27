@@ -15,7 +15,9 @@ mod utils;
 
 fn main() {
     rocket::ignite().mount("/", routes![
-        controllers::user::insert,        
+        controllers::user::insert,
+        controllers::user::get, 
+        controllers::user::getAll, 
     ])
     .register(catchers![controllers::not_found::lookup])
     .launch();

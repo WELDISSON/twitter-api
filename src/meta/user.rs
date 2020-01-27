@@ -20,9 +20,3 @@ pub struct GetResponse {
   pub email: String,
   pub following: bson::Array,
 }
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct FollowRequest {
-  pub user_id: String,
-  pub user_to_follow_id: String,
-}
