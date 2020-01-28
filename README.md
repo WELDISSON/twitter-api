@@ -1,7 +1,6 @@
 # Backend
 ## prerequisites:
 - Rust
-- cargo
 - mongoDB running
 
 ---
