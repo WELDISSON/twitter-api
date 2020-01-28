@@ -14,7 +14,7 @@ mod controllers;
 mod utils;
 
 fn main() {
-    rocket::ignite().mount("/", routes![
+    rocket::ignite().mount("/api/", routes![
         controllers::user::insert,
         controllers::user::getAll,
         controllers::tweet::get, 
