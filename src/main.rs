@@ -16,8 +16,13 @@ mod utils;
 fn main() {
     rocket::ignite().mount("/", routes![
         controllers::user::insert,
-        controllers::user::get, 
-        controllers::user::getAll, 
+        controllers::user::getAll,
+        controllers::tweet::get, 
+        controllers::tweet::getAll, 
+        controllers::tweet::insert,
+        controllers::tweet::getAllFromUser, 
+        controllers::tweet::like, 
+        controllers::tweet::retweet
     ])
     .register(catchers![controllers::not_found::lookup])
     .launch();
